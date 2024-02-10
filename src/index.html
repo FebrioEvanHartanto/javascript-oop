@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript OOP - Async HW</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col justify-center items-center bg-gray-200">
+
+  <div>
+    <div class="flex justify-evenly gap-1">
+      <div class="active w-full text-center py-2 rounded-xl cursor-pointer hover:bg-blue-500" id="register-tab"
+        onclick="toggleTab('register-tab', 'pendaftar-tab')">
+        Registrasi</div>
+      <div class="inactive w-full text-center py-2 rounded-xl cursor-pointer hover:bg-blue-500" id="pendaftar-tab"
+        onclick="toggleTab('pendaftar-tab', 'register-tab')">List
+        Pendaftar</div>
+    </div>
+
+    <div class="w-[500px] h-full bg-white border-gray-500 border-[1px] rounded-lg p-5">
+      <div id="card-content">
+        <form>
+          <div id="register-form">
+            <div class="text-center text-2xl font-bold mt-3" id="card-title">Form Registrasi</div>
+            <div class="flex flex-col gap-5 mt-10">
+              <div class="flex flex-col gap-2">
+                <label for="nama">Nama</label>
+                <input type="text" placeholder="Masukan nama anda..."
+                  class="w-[400px] border-gray-500 border-[1px] px-2 py-2" id="input-nama">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="umur">Umur</label>
+                <input type="number" placeholder="Masukan umur anda..."
+                  class="w-[200px] border-gray-500 border-[1px] px-2 py-2" id="input-umur">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="uang-sangu">Uang Sangu</label>
+                <input type="number" placeholder="Masukan uang sangu anda..."
+                  class="w-[400px] border-gray-500 border-[1px] px-2 py-2" id="input-uang">
+              </div>
+
+              <div class="mt-5" id="validation-status-text"></div>
+              <button type="button" class=" bg-blue-400 py-2" id="add-user-btn">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="list-pendaftar-content" class="hidden">
+          <div class="text-center text-2xl font-bold mt-3" id="card-title">List Pendaftar</div>
+
+          <table class=" table w-full text-center mt-5">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Uang Saku</th>
+              </tr>
+            </thead>
+
+            <tbody id="table-body">
+            </tbody>
+
+          </table>
+
+          <div id="avg-uang-saku" class="font-semibold mt-5"></div>
+          <div id="avg-umur" class="font-semibold"></div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
